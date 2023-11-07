@@ -30,7 +30,7 @@ from dash.dependencies import Input, Output, State
 # sells=sells[['seller_state','price','customer_state','product_category_name_english','order_purchase_timestamp','order_status']]
 # df=sells.copy()
 
-df=pd.read_csv('/sells.csv')
+df=pd.read_csv('sells.csv')
 df['order_purchase_timestamp'] = pd.to_datetime(df['order_purchase_timestamp'])
 min_date = df['order_purchase_timestamp'].min()
 max_date = df['order_purchase_timestamp'].max()
